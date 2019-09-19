@@ -1,24 +1,38 @@
-# README
+## Usage
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+0. Clone
+```
+    git clone https://github.com/rsfxiii/shopify-rails-sql-nginx-docker.git
+```
 
-Things you may want to cover:
+1. Installation
+```
+    bundle install
+    npm install
+```
+2. Startup
+```
+    bundle exec rake db:create db:migrate # First time only
+    bundle exec rails server
+```
 
-* Ruby version
+---
 
-* System dependencies
+# Database How-To
 
-* Configuration
+**Default Settings**:
+* Port: 5432 (Container & Host)
+* Config: `config/database.yaml`
 
-* Database creation
+## DB Management
 
-* Database initialization
+To create a database:
+`bundle exec rake db:create`
 
-* How to run the test suite
+## Migrations
 
-* Services (job queues, cache servers, search engines, etc.)
+**To run migrations**, execute the following:
+`bundle exec rake db:migrate`
 
-* Deployment instructions
 
-* ...
+
